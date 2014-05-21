@@ -1,0 +1,43 @@
+        /*public static string[] lJumps32={"0F80","0F81","0F82","0F83","0F84","0F85","0F86","0F87","0F88", 
+            "0F89","0F8A","0F8B","0F8C","0F8D","0F8E","0F8F"};
+        public static string[] Jumps32={ "E9","E8"};
+        public static string[] Jumps8={ "70","71","72","73","74","75","76","77","78","79","7A","7B",
+            "7C","7D","7E","7F","E3","EB","E0","E1","E2"};*/
+            //public static ArrayList JumpLocations;
+                        //JumpLocations=new ArrayList();
+                        
+                        /*
+        public static void dwToHex(int i) {
+            JumpLocations.Add(i);
+        }
+
+        public static void dwHexParse(string s,int offset) {
+            if(s.StartsWith("near ")) s=s.Remove(0,5);
+            int i=HexParse(s);
+            dwToHex(i+offset);
+        }
+
+        public static void wHexParse(string s,int offset) {
+            if(s.StartsWith("0x")) s=s.Remove(0,2);
+            short i=short.Parse(s,System.Globalization.NumberStyles.AllowHexSpecifier);
+            dwToHex(i+offset);
+        }
+        */
+        
+        #if fulltest
+            //Preprocess to find jump locations
+            /*while(!sr.EndOfStream) {
+                try {
+                    LineInfo li=new LineInfo(sr.ReadLine());
+                    if(li.code.Length==12&&Array.IndexOf(lJumps32,li.code.Substring(0,4))!=-1) {
+                        dwHexParse(li.StoredOperands,HexParse(li.address)+li.code.Length/2);
+                    } else if(li.code.Length==10&&Array.IndexOf(Jumps32,li.code.Substring(0,2))!=-1) {
+                        dwHexParse(li.StoredOperands,HexParse(li.address)+li.code.Length/2);
+                    } else if(li.code.Length==6&&Array.IndexOf(Jumps8,li.code.Substring(0,2))!=-1) {
+                        wHexParse(li.StoredOperands,HexParse(li.address)+li.code.Length/2);
+                    }
+                } catch(OptimizationException) { }
+            }
+            JumpLocations.Sort();
+            if(!JumpLocations.Contains(1300424)) throw new Exception();*/
+#endif
