@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+# SharpDevelop 2.2.1.2648
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilePacker", "FilePacker\FilePacker.csproj", "{2228D55A-C99C-4B0F-A159-E7BD7B65012A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "exeopt", "exeopt\exeopt.csproj", "{C0715C3F-654D-414A-9A04-2B38F19774F0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C0715C3F-654D-414A-9A04-2B38F19774F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0715C3F-654D-414A-9A04-2B38F19774F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0715C3F-654D-414A-9A04-2B38F19774F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0715C3F-654D-414A-9A04-2B38F19774F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2228D55A-C99C-4B0F-A159-E7BD7B65012A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2228D55A-C99C-4B0F-A159-E7BD7B65012A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2228D55A-C99C-4B0F-A159-E7BD7B65012A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2228D55A-C99C-4B0F-A159-E7BD7B65012A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+EndGlobal

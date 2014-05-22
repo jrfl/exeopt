@@ -1,0 +1,66 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" xmlns:Conversion="urn:Conversion">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C0715C3F-654D-414A-9A04-2B38F19774F0}</ProjectGuid>
+    <RootNamespace>Patcher</RootNamespace>
+    <AssemblyName>exeopt</AssemblyName>
+    <OutputType>WinExe</OutputType>
+    <ApplicationIcon />
+    <WarningLevel>4</WarningLevel>
+    <NoWarn />
+    <StartupObject />
+    <NoStdLib>False</NoStdLib>
+    <NoConfig>False</NoConfig>
+    <RunPostBuildEvent>OnSuccessfulBuild</RunPostBuildEvent>
+    <PreBuildEvent />
+    <PostBuildEvent />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>True</DebugSymbols>
+    <Optimize>False</Optimize>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DefineConstants />
+    <OutputPath>..\bin\Debug\</OutputPath>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>False</DebugSymbols>
+    <Optimize>True</Optimize>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DefineConstants />
+    <OutputPath>..\bin\Release\</OutputPath>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainForm.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Console.cs" />
+    <Compile Include="PatchDialog.cs" />
+    <Compile Include="BZip2.cs" />
+    <Compile Include="vectorizer.cs" />
+    <Compile Include="CodeGenerator.cs" />
+    <Compile Include="fpu.cs" />
+    <Compile Include="Patcher.cs" />
+    <Compile Include="PEhandler.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="structs.cs" />
+    <Compile Include="files.cs" />
+    <EmbeddedResource Include="exeopt.MainForm.resources" />
+    <EmbeddedResource Include="PatchDialog.resources" />
+    <EmbeddedResource Include="MainForm.resources" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />
+</Project>
