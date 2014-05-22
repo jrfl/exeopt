@@ -142,14 +142,14 @@ namespace ICSharpCode.SharpZipLib.Checksums
 		/// <summary>
 		/// update Crc value
 		/// </summary>
-		/// <param name="inCh">data update is based on</param>
-		public void Update(int inCh)
+		/// <param name="value">data update is based on</param>
+		public void Update(int value)
 		{
-			int temp = (globalCrc >> 24) ^ inCh;
+			int temp = (globalCrc >> 24) ^ value;
 			if (temp < 0) {
 				temp = 256 + temp;
 			}
-			globalCrc = (int)((globalCrc << 8) ^ crc32Table[temp]);
+			globalCrc = unchecked((int)((globalCrc << 8) ^ crc32Table[temp]));
 		}
 
 		/// <summary>
